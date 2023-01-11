@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title> Add Location</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1 class="header">Add Location</h1>
+            <form id="location">
+              <div class="latitude">
+                <label class="blocksmallscreen" for="latitude">Latitude:</label>
+                <input type="text" id="latitude" required placeholder="Enter Latitude" name="latitude"/>
+              </div>
+              <div class="longitude">
+                  <label class="blocksmallscreen" for="longitude">Longitude:</label>
+                  <input type="text" id="longitude" required placeholder="Enter Longitude" name="longitude" />
+              </div>
+              <button id="position">On Map</button>
+              <div>
+                <div style="margin: 8px 0px;" class="latitude">
+                  <label class="blocksmallscreen" for="governorate">Governorate:</label>
+                  <select name="governorate" id="governorate" required >
+                    <option value="">-- Chose a governorate ... --</option>
+                    <option value="1">Cairo</option>
+                    <option value="2">Giza</option>
+                    <option value="3">Alexandria</option>
+                  </select>
+                </div>
+                <div style="margin: 8px 0px;" class="latitude">
+                  <label class="blocksmallscreen" for="area">Area:</label>
+                  <select name="area"  id="area" required >
+                    <option value="">-- Chose an area ... --</option>
+                    <option value="1">Maadi</option>
+                    <option value="2">Helwan</option>
+                    <option value="3">May 15th City</option>
+                  </select>                
+                </div>
+                <div><p class="location_type">Please select a location type:</p>
+                  <div class="type">
+                    <input type="radio" id="branch" name="location_type" value="YES">
+                    <label for="branch">Branch</label>
+                  </div>
+                  <div class="type">
+                    <input type="radio" id="atm" name="location_type" value="NO">
+                    <label for="atm">ATM</label>
+                  </div>                  
+                </div>
+                <div><p class="location_type">Please select one or more:</p>
+                  <div class="type">
+                    <input type="checkbox" id="tharwa" name="tharwa" value="1">
+                    <label for="tharwa"><abbr title="Does this branch location has a Tharwa lounge">Tharwa</abbr></label>
+                  </div>
+                  <div class="type">
+                    <input type="checkbox" id="SMEs_business_centers" name="SMEs_business_centers" value="1">
+                    <label for="SMEs_business_centers">SMEs business centers</label>
+                  </div>
+                  <div class="type">
+                    <input type="checkbox" id="Non_financial_hubs" name="Non_financial_hubs" value="1">
+                    <label for="Non_financial_hubs">Special needs</label>
+                  </div>
+                  <div class="type">
+                    <input type="checkbox" id="Special_needs" name="Special_needs" value="1">
+                    <label for="Special_needs"> <abbr title="Is this branch designed to provide services to customers with special needs">Special needs</abbr></label>
+                  </div>               
+                </div>
+              </div>
+              <button id="position">Submit</button>
+            </form>
+        </div>
+        <div id="map"></div>
+    </div>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkKS0EROK8-8BKn8cRG9xSPNIkjwloB1c&callback=initMap&v=weekly"
+      defer
+    ></script>
+  </body>
+</html>

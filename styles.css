@@ -1,0 +1,149 @@
+#map {
+  height: 400px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px dashed #ffa500;
+  border-top: none;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+}
+.container .form {
+  background-color: #ffa500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border: 2px solid #000;
+}
+
+.container .form #governorate,
+.container .form #area {
+  width: 259px;
+  height: 35px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.container .form input {
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  font-size: 16px;
+  background-image: url('GoogleLocation.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  background-size: 21px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.container .form #position {
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 2px solid #000;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.container .form #position:hover {
+  background-color: #ffa500;
+  cursor: pointer;
+}
+.container .form .blocksmallscreen{
+  width: 100px !important;
+  display: inline-block;
+}
+
+.container .form #position:active {
+  background-color: #ff8800;
+  cursor: pointer;
+}
+
+.longitude,
+.latitude,.type {
+  display: inline-block;
+}
+.location_type{
+  display: inline-block;
+  margin-bottom: 0px;
+}
+
+
+/*****Checkbox Style*****/
+input[type=checkbox],
+input[type=radio]{
+text-align: center;
+width: 20px;
+height: 20px;
+}
+
+
+/**********/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 460px;
+  }
+  .longitude,
+  .latitude {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .longitude input,
+  .latitude input {
+    width: 100%;
+  }
+  
+  #position {
+    width: 100%;
+  }
+  .location_type, .blocksmallscreen{
+    display: block !important;
+  }
+
+  .container .form #governorate, .container .form #area {
+    width: 100%;
+  } 
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .container {
+    width: 600px;
+  }  
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 700px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 1000px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    width: 1100px;
+  }
+}
