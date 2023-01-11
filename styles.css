@@ -52,7 +52,8 @@ body {
   -o-border-radius: 10px;
 }
 
-.container .form #position {
+.container .form #position ,
+#submit{
   padding: 12px 20px;
   margin: 8px 0;
   border: 2px solid #000;
@@ -63,19 +64,20 @@ body {
   -o-border-radius: 8px;
 }
 
-.container .form #position:hover {
+.container .form #position:hover,#submit:hover {
   background-color: #ffa500;
   cursor: pointer;
 }
+.container .form #position:active,#submit:active {
+  background-color: #ff8800;
+  cursor: pointer;
+}
+
 .container .form .blocksmallscreen{
   width: 100px !important;
   display: inline-block;
 }
 
-.container .form #position:active {
-  background-color: #ff8800;
-  cursor: pointer;
-}
 
 .longitude,
 .latitude,.type {
@@ -112,7 +114,7 @@ height: 20px;
     width: 100%;
   }
   
-  #position {
+  #position,#submit {
     width: 100%;
   }
   .location_type, .blocksmallscreen{
